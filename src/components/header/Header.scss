@@ -9,12 +9,12 @@ header {
     background: url("../../assets/mobile/bg-pattern-header.svg");
     height: 13.6rem;
   }
-  padding: 2rem;
+  padding: 4rem 0rem;
   height: 16rem;
   .header-wrapper {
     display: flex;
     align-items: center;
-    width: 90%;
+    width: $width;
     margin: 0 auto;
     justify-content: space-between;
     .title {

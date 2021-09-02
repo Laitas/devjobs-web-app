@@ -4,6 +4,7 @@ import sunIcon from '../../assets/desktop/icon-sun.svg'
 import { useSelector,useDispatch } from 'react-redux'
 import { toggleTheme } from '../../redux/themeSlice'
 import './Header.scss'
+import Search from '../Search/Search'
 
 const Header = () => {
     const themeState = useSelector(state => state.theme.lightTheme)
@@ -30,6 +31,7 @@ const Header = () => {
             </div>
           </div>
         </div>
+        <Search/>
       </header>
     );
 }

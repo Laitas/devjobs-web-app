@@ -1,0 +1,40 @@
+@import '../../variables';
+.btn{
+    border-radius: 5px;
+    padding: 1rem 2rem;
+    font-family: inherit;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    display: flex;
+    align-items: center;
+    &.mobile{
+        padding: 1rem;
+    }
+    svg{
+        height: 2.4rem;
+        width: 3rem;
+    }
+    &.one{
+        color: $white;
+        background-color: $violet;
+        &:hover{
+            background-color: $light-violet;
+        }
+    }
+    &.two{
+        color: $violet;
+        background-color: $button-2-default;
+        &:hover{
+            background-color: $button-2-hover;
+        }
+    }
+    &.two.dark{
+        color: $white;
+        background-color: $button-2-dark-default;
+        &:hover{
+            background-color: $button-2-dark-hover;
+        }
+    }
+}
