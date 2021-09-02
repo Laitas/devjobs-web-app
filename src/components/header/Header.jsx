@@ -9,6 +9,10 @@ import Search from '../Search/Search'
 const Header = () => {
     const themeState = useSelector(state => state.theme.lightTheme)
     const dispatch = useDispatch()
+    const themeToggle = () =>{
+      document.body.classList.toggle("dark-theme");
+      dispatch(toggleTheme());
+    }
     return (
       <header>
         <div className="header-wrapper">
@@ -19,7 +23,7 @@ const Header = () => {
             <div className="sun-icon">
               <img src={sunIcon} alt="" />
             </div>
-            <div className="theme-toggle-button-wrapper" onClick={()=> dispatch(toggleTheme())}>
+            <div className="theme-toggle-button-wrapper" onClick={themeToggle}>
               <div
                 className={
                   themeState ? "theme-toggle-button" : "theme-toggle-button dark"
