@@ -2,6 +2,13 @@
 
 header {
   background: url("../../assets/desktop/bg-pattern-header.svg");
+  @media (max-width: 768px) {
+    background: url("../../assets/tablet/bg-pattern-header.svg");
+  }
+  @media (max-width: 375px) {
+    background: url("../../assets/mobile/bg-pattern-header.svg");
+    height: 13.6rem;
+  }
   padding: 2rem;
   height: 16rem;
   .header-wrapper {
@@ -10,13 +17,6 @@ header {
     width: 90%;
     margin: 0 auto;
     justify-content: space-between;
-    @media (max-width: 768px) {
-      background: url("../../assets/tablet/bg-pattern-header.svg");
-    }
-    @media (max-width: 375px) {
-      background: url("../../assets/mobile/bg-pattern-header.svg");
-      height: 13.6rem;
-    }
     .title {
       color: $white;
     }
