@@ -1,82 +1,72 @@
-@import '../../_variables';
-.search-component{
+@import "../../_variables";
+.search-component {
+  display: flex;
+  background-color: $white;
+  width: $width;
+  margin: 0 auto;
+  margin-top: 5rem;
+  border-radius: 5px;
+  justify-content: space-evenly;
+
+  input {
+    border: none;
+  }
+  .filter-location {
+    border-left: 1px solid $gray;
+    border-right: 1px solid $gray;
+    input {
+      max-width: 14rem;
+      text-overflow: ellipsis;
+      width: 100%;
+    }
+  }
+  .filter-icon {
+    padding: 0rem 1rem;
+  }
+  .filter-location,
+  .filter-title,
+  .right-wrapper {
+    padding: 1rem;
     display: flex;
-    background-color: $white;
-    width: $width;
-    margin: 0 auto;
-    margin-top: 5rem;
-    border-radius: 5px;
-    justify-content: space-evenly;
-    
-    input{
-        border: none;
+    align-items: center;
+    width: 100%;
+    form {
+      display: flex;
     }
-    .filter-location{
-        border-left: 1px solid $gray;
-        border-right: 1px solid $gray;
-        input{
-            max-width: 14rem;
-            text-overflow: ellipsis;
-            width: 100%;
-        }
+    @media (max-width: 768px) {
+      padding: 0.5rem;
     }
-    .filter-icon{
-        padding: 0rem 1rem;
+  }
+  .filter-title {
+    max-width: 40rem;
+    input {
+      text-overflow: ellipsis;
+      width: 100%;
     }
-    .filter-location,.filter-title,.right-wrapper{
-        padding: 1rem;
-        display: flex;
-        align-items: center;
-        width: 100%;
-        form{
-            display: flex;
-            // flex-wrap: nowrap;
-        }
-        @media (max-width:768px) {
-            padding: 0.5rem;
-        }
+    form {
+      width: 100%;
     }
-    .filter-title{
-        max-width: 40rem;
-        input{
-            text-overflow: ellipsis;
-        width: 100%;
-        }
-        form{
-            width: 100%;
-        }
+    @media (max-width: 500px) {
+      padding-left: 2rem;
     }
-    .right-wrapper{
-        justify-content: space-between;
-        
-        .checkbox{
-            display: flex;
-            align-items: center;
-            img{
-                position: absolute;
-                left: 50%;
-                top: 50%;
-                transform: translate(-50%,-50%);
-            }
-            &-input{
-                min-width: 2.4rem;
-                min-height: 2.4rem;
-                background-color: $checkbox-default;
-                cursor: pointer;
-                border-radius: 5px;
-                transition: all .3s ease;
-                position: relative;
-                &.checked{
-                    background-color: $violet;
-                }
-                &:hover{
-                    background-color: $violet;
-                }
-            }
-        }
-        .label{
-            font-weight: 600;
-            margin: 0 0.5rem;
-        }
+  }
+  .right-wrapper {
+    justify-content: space-between;
+    @media (max-width: 500px) {
+      justify-content: flex-end;
+      flex: 1;
+      .modal-btn {
+        margin: 0 1.5rem;
+        cursor: pointer;
+      }
     }
+    .checkbox {
+      display: flex;
+      align-items: center;
+    }
+    .label {
+      font-weight: 600;
+      margin: 0 0.5rem;
+    }
+  }
 }

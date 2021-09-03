@@ -1,0 +1,50 @@
+@import '../../variables';
+.overlay-wrapper{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(black,.5);
+}
+    
+    .modal-wrapper{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 9;
+    
+    .modal{
+        background-color: $white;
+        border-radius: 5px;
+        width: $width;
+        z-index: 10;
+        .filter-location{
+            padding: 2rem;
+            border: none;
+            border-bottom: 1px solid $gray;
+            
+        }
+        .bottom-wrapper{
+            padding: 2rem;
+            .label{
+                font-weight: 500;
+                margin-left: 1rem;
+            }
+            .checkbox{
+                display: flex;
+                margin: 1rem 0;
+            }
+            .search-btn button{
+                width: 100%;
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+}
