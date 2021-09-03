@@ -4,6 +4,7 @@ import persistReducer from "redux-persist/es/persistReducer";
 import { combineReducers } from "redux";
 import themeSlice from "./themeSlice";
 import checkboxSlice from "./checkboxSlice";
+import jobsSlice from "./jobsSlice";
 const persistConfig = {
     key: 'root',
     storage
@@ -11,6 +12,7 @@ const persistConfig = {
 const reducers = combineReducers({
     theme : themeSlice,
     check : checkboxSlice,
+    jobs : jobsSlice,
 })
 const persistedReducer = persistReducer(persistConfig,reducers)
 const store = configureStore({
