@@ -17,6 +17,10 @@ header {
     width: $width;
     margin: 0 auto;
     justify-content: space-between;
+
+    @media (max-width:781px) {
+      width: $width-tablet;
+    }
     .title {
       color: $white;
     }

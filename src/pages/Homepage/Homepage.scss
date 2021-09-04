@@ -1,6 +1,18 @@
 @import '../../variables';
 .homepage{
     width: $width;
-    margin: 0 auto;
-    margin-top: 8rem;
+    margin: 5rem auto;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
+    align-items: center;
+    
+    @media (max-width: 781px) {
+        width: $width-tablet;
+        justify-items: center;
+    }
+    @media (max-width:375px) {
+    grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+        
+    }
 }
