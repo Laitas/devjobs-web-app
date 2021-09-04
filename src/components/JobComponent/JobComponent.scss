@@ -1,10 +1,14 @@
 @import '../../variables';
 .job-component{
+    min-width: 32rem;
     position: relative;
     border-radius: 5px;
     margin-top: 5rem;
     padding: 3rem;
     cursor: pointer;
+    @media (max-width:375px) {
+        min-width: 28rem;
+    }
     .logo{
         position: absolute;
         width: 5rem;
