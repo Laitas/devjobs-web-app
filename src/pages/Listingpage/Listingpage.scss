@@ -2,6 +2,7 @@
 .listing-page{
     max-width: 73rem;
     margin: 0 auto;
+    padding: 0 1rem;
     .listing{
         margin-top: 2rem;
         background-color: $white;
@@ -25,6 +26,19 @@
             .location{
                 font-weight: 500;
                 color: $violet;
+            }
+            @media (max-width:480px) {
+                flex-direction: column;
+
+                .button{
+                    margin-top: 5rem;
+                    width: 100%;
+                    button{
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                    }
+                }
             }
         }
         .description{

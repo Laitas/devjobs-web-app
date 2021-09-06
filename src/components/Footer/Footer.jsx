@@ -1,8 +1,7 @@
 import React from 'react'
 import Button from '../Button/Button'
 
-const Footer = (listing) => {
-    const {company,position} = listing
+const Footer = ({company,position}) => {
     return (
         <footer>
             <div className="info">
