@@ -9,8 +9,10 @@ import './Homepage.scss'
 const Homepage = () => {
   const [limit,setLimit] = useState(8)
   const dispatch = useDispatch();
-  const check = useSelector(state => state.check.check)
   const history = useHistory()
+  const check = useSelector(state => state.check.check)
+  const title = useSelector(state => state.search.title)
+  const location = useSelector(state => state.search.location)
   const jobs = useSelector((state) => state.jobs);
   const routeChange = (id) =>{
     history.push(`job/${id}`)
@@ -30,12 +32,37 @@ const Homepage = () => {
       dispatch(setJobs(data));
     }
   }
+  const searchInput = () =>{
+    if (title !== "") {
+      const found = data.filter(
+        (job) =>
+          job.company.slice(0, title.length).toLowerCase() ===
+            title.toLowerCase() ||
+          job.position.slice(0, title.length).toLowerCase() ===
+            title.toLowerCase()
+      );
+      dispatch(setJobs(found));
+    } else if (location !== "") {
+      console.log(location);
+      const found = data.filter(
+        (job) =>
+          job.location.slice(0, location.length).toLowerCase() ===
+          location.toLowerCase()
+      );
+      dispatch(setJobs(found));
+    } else if (!title || !location) {
+      dispatch(setJobs(data));
+    }
+  }
   useEffect(() => {
     dispatch(setJobs(data));
   },[]);
   useEffect(()=>{
       checkFullTime();   
   },[check])
+  useEffect(()=>{
+    searchInput()
+  },[title,location])
   return (
     <section className="homepage">
       <div className="jobs">

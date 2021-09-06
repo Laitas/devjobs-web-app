@@ -1,13 +1,14 @@
 import React from 'react'
-import { useDispatch } from 'react-redux';
+import { useDispatch,useSelector } from 'react-redux';
 import { toggleCheckbox } from '../../redux/checkboxSlice';
 import locationIcon from "../../assets/desktop/icon-location.svg";
 import Button from '../Button/Button';
 import Checkbox from '../Checkbox/Checkbox';
 import './Modal.scss'
 
-const Modal = ({modal,setModal}) => {
+const Modal = ({modal,setModal,handleChangeLocation}) => {
     const dispatch = useDispatch()
+      const location = useSelector((state) => state.search.location);
     return (
         <div className="modal-wrapper">
         <div className="overlay-wrapper" onClick={()=> setModal(!modal)}></div>
@@ -15,7 +16,9 @@ const Modal = ({modal,setModal}) => {
         <div className="filter-location">
           <form>
             <img className="filter-icon" src={locationIcon} alt="" />
-            <input type="text" placeholder="Filter by location..." />
+            <input type="text" placeholder="Filter by location..." 
+            value={location}
+            onChange={e=>handleChangeLocation(e)}/>
           </form>
         </div>
         <div className="bottom-wrapper">
@@ -24,7 +27,7 @@ const Modal = ({modal,setModal}) => {
             <p className="label">Full Time Only</p>
           </div>
             <div className="search-btn">
-              <Button text="Search" />
+              <Button text="Search" onClick={()=>setModal(!modal)}/>
             </div>
         </div>
       </div>
