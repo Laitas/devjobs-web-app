@@ -1,8 +1,8 @@
 import React from 'react'
 import './JobComponent.scss'
-const JobComponent = ({logo,logoBackground,location,company,position,postedAt,contract}) => {
+const JobComponent = ({onClick,logo,logoBackground,location,company,position,postedAt,contract}) => {
     return (
-      <div className="job-component">
+      <div onClick={onClick} className="job-component">
         <div style={{ backgroundColor: logoBackground }} className="logo">
           <img src={logo} alt={company} />
         </div>

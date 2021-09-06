@@ -1,6 +1,6 @@
 @import "../../variables";
 
-header {
+.header {
   background: url("../../assets/desktop/bg-pattern-header.svg");
   @media (max-width: 768px) {
     background: url("../../assets/tablet/bg-pattern-header.svg");

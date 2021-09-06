@@ -3,18 +3,20 @@ import moonIcon from '../../assets/desktop/icon-moon.svg'
 import sunIcon from '../../assets/desktop/icon-sun.svg'
 import { useSelector,useDispatch } from 'react-redux'
 import { toggleTheme } from '../../redux/themeSlice'
+import { useLocation } from 'react-router'
 import './Header.scss'
 import Search from '../Search/Search'
 
 const Header = () => {
     const themeState = useSelector(state => state.theme.lightTheme)
+    const location = useLocation()
     const dispatch = useDispatch()
     const themeToggle = () =>{
       document.body.classList.toggle("dark-theme");
       dispatch(toggleTheme());
     }
     return (
-      <header>
+      <header className='header'>
         <div className="header-wrapper">
           <div className="title">
             <h1>devjobs</h1>
@@ -35,7 +37,9 @@ const Header = () => {
             </div>
           </div>
         </div>
+        {location.pathname.includes('/job/') ? null :
         <Search/>
+        }
       </header>
     );
 }
