@@ -9,6 +9,7 @@ import './Homepage.scss'
 const Homepage = () => {
   const [limit,setLimit] = useState(8)
   const dispatch = useDispatch();
+  const check = useSelector(state => state.check.check)
   const history = useHistory()
   const jobs = useSelector((state) => state.jobs);
   const routeChange = (id) =>{
@@ -21,10 +22,20 @@ const Homepage = () => {
       setLimit(limit + 8)
     }
   }
+  const checkFullTime = () =>{
+    if(check){
+      const found = jobs.filter((job) => job.contract === "Full Time");
+      dispatch(setJobs(found));
+    }else{
+      dispatch(setJobs(data));
+    }
+  }
   useEffect(() => {
     dispatch(setJobs(data));
-    console.log(jobs);
   },[]);
+  useEffect(()=>{
+      checkFullTime();   
+  },[check])
   return (
     <section className="homepage">
       <div className="jobs">

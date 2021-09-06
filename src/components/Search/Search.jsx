@@ -11,7 +11,6 @@ import Checkbox from '../Checkbox/Checkbox'
 
 const Search = () => {
     const check = useSelector(state => state.check.check)
-    console.log(check);
     const dispatch = useDispatch()
     const [modal,setModal] = React.useState(false)
     const [width,setWidth] = React.useState(window.innerWidth)
