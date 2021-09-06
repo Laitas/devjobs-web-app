@@ -1,5 +1,6 @@
 import React from 'react'
 import Button from '../Button/Button'
+import './Footer.scss'
 
 const Footer = ({company,position}) => {
     return (

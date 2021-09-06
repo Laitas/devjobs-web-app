@@ -26,6 +26,7 @@ const Listingpage = () => {
     }else{
         const {apply,company,contract,description,location,logo,logoBackground,position,postedAt,requirements,role,website} = listing;
         return (
+          <>
           <section className="listing-page">
             <ListingHeader
               logo={logo}
@@ -68,8 +69,9 @@ const Listingpage = () => {
                     </ol>
                 </div>
             </main>
-            <Footer company={company} position={position} />
           </section>
+            <Footer company={company} position={position} />
+          </>
         );
 }
 }
