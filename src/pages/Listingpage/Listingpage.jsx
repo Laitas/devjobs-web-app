@@ -10,7 +10,6 @@ const Listingpage = () => {
     const [listing,setListing] = React.useState([])
     const [loading,setLoading] = React.useState(true)
     const params = useParams()
-    console.log(params.id);
     const jobs = useSelector(state => state.jobs)
     const findJob = () =>{
         const found = jobs.find(item => item.id === parseInt(params.id))
@@ -19,7 +18,6 @@ const Listingpage = () => {
     }
     React.useEffect(()=>{
         findJob()
-        console.log(listing);
     },[listing])
     if(loading){
        return <section className="listing-page">Loading</section>;
