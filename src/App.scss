@@ -13,8 +13,11 @@ body{
     max-width: 1440px;
     margin: 0 auto;
     background-color: $light-gray;
-    .job-component{
-        background-color: $white;
+
+    // DARK MODE
+    &.dark-theme{
+        background-color: $midnight;
+
     }
 }
 h1{

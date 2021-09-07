@@ -67,3 +67,12 @@
         }
     }
 }
+// DARK MODE
+body.dark-theme{
+    .listing-header{    
+        background-color: $very-dark-blue;
+        h2{
+            color: $white;
+        }
+    }
+}

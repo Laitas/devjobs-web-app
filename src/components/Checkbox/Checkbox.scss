@@ -22,3 +22,15 @@
       background-color: $violet;
   }
 }
+// DARK MODE
+body.dark-theme{
+  .checkbox-input{
+    background-color: $button-2-dark-default;
+    &.checked {
+      background-color: $violet;
+    }
+    &:hover {
+      background-color: $violet;
+  }
+  }
+}

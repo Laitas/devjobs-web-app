@@ -43,7 +43,6 @@ const Homepage = () => {
       );
       dispatch(setJobs(found));
     } else if (location !== "") {
-      console.log(location);
       const found = data.filter(
         (job) =>
           job.location.slice(0, location.length).toLowerCase() ===

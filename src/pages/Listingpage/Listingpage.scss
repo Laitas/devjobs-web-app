@@ -29,6 +29,7 @@
             }
             @media (max-width:480px) {
                 flex-direction: column;
+                align-items: baseline;
 
                 .button{
                     margin-top: 5rem;
@@ -85,6 +86,15 @@
                     left: 1rem;
                 }
             }
+        }
+    }
+}
+// DARK MODE
+body.dark-theme{
+    .listing{
+        background-color: $very-dark-blue;
+        .position,h3{
+            color: $white;
         }
     }
 }

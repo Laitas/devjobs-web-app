@@ -73,3 +73,26 @@
     }
   }
 }
+// DARK MODE
+
+body.dark-theme{
+  .search-component{
+    background-color: $very-dark-blue;
+    input{
+      background-color: $very-dark-blue;
+      color: $white;
+    }
+    .label{
+      color: $white;
+    }
+    .modal-btn img{
+      filter: brightness(900%);
+    }
+    .filter-location{
+      background-color: $very-dark-blue;
+    }
+    .bottom-wrapper{
+      background-color: $very-dark-blue;
+    }
+  }
+}

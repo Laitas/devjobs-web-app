@@ -31,3 +31,13 @@ footer{
         }
     }
 }
+// DARK MODE
+
+body.dark-theme{
+    footer{
+        background-color: $very-dark-blue;
+        h2{
+            color: $white;
+        }
+    }
+}

@@ -48,3 +48,10 @@
         }
     }
 }
+// DARK MODE
+
+body.dark-theme{
+    .modal{
+        background-color: $very-dark-blue;
+    }
+}

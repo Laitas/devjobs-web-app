@@ -6,6 +6,10 @@
     margin-top: 5rem;
     padding: 3rem;
     cursor: pointer;
+    background-color: $white;
+    &:hover{
+            color: $dark-gray;
+        }
     @media (max-width:375px) {
         min-width: 28rem;
     }
@@ -33,6 +37,17 @@
             margin: 1rem 0;
         }
         .company,.time{
+            color: $dark-gray;
+        }
+    }
+}
+// DARK MODE
+
+body.dark-theme{
+    .job-component{
+        background-color: $very-dark-blue;
+        color: $white;
+        &:hover{
             color: $dark-gray;
         }
     }
