@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/devjobs-web-app/static/css/main.9a1f37cf.chunk.css",
+    "main.js": "/devjobs-web-app/static/js/main.ee78ff15.chunk.js",
+    "main.js.map": "/devjobs-web-app/static/js/main.ee78ff15.chunk.js.map",
+    "runtime-main.js": "/devjobs-web-app/static/js/runtime-main.a637fc23.js",
+    "runtime-main.js.map": "/devjobs-web-app/static/js/runtime-main.a637fc23.js.map",
+    "static/js/2.cfda9c9c.chunk.js": "/devjobs-web-app/static/js/2.cfda9c9c.chunk.js",
+    "static/js/2.cfda9c9c.chunk.js.map": "/devjobs-web-app/static/js/2.cfda9c9c.chunk.js.map",
+    "static/js/3.75c92199.chunk.js": "/devjobs-web-app/static/js/3.75c92199.chunk.js",
+    "static/js/3.75c92199.chunk.js.map": "/devjobs-web-app/static/js/3.75c92199.chunk.js.map",
+    "index.html": "/devjobs-web-app/index.html",
+    "static/css/main.9a1f37cf.chunk.css.map": "/devjobs-web-app/static/css/main.9a1f37cf.chunk.css.map",
+    "static/js/2.cfda9c9c.chunk.js.LICENSE.txt": "/devjobs-web-app/static/js/2.cfda9c9c.chunk.js.LICENSE.txt",
+    "static/media/Header.scss": "/devjobs-web-app/static/media/bg-pattern-header.f3307602.svg",
+    "static/media/icon-check.7b769ecf.svg": "/devjobs-web-app/static/media/icon-check.7b769ecf.svg",
+    "static/media/icon-filter.2471816d.svg": "/devjobs-web-app/static/media/icon-filter.2471816d.svg",
+    "static/media/icon-location.325ff3d9.svg": "/devjobs-web-app/static/media/icon-location.325ff3d9.svg",
+    "static/media/icon-moon.038e80ca.svg": "/devjobs-web-app/static/media/icon-moon.038e80ca.svg",
+    "static/media/icon-search.09900c2e.svg": "/devjobs-web-app/static/media/icon-search.09900c2e.svg",
+    "static/media/icon-sun.9422c153.svg": "/devjobs-web-app/static/media/icon-sun.9422c153.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a637fc23.js",
+    "static/js/2.cfda9c9c.chunk.js",
+    "static/css/main.9a1f37cf.chunk.css",
+    "static/js/main.ee78ff15.chunk.js"
+  ]
+}
