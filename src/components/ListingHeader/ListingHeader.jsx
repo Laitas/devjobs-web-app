@@ -8,7 +8,7 @@ const ListingHeader = ({logo,logoBackground,company,website}) => {
       <header className="listing-header">
         <div style={{ backgroundColor: logoBackground }} className="logo">
           <img
-            src={logo.slice(1, logo.length)}
+            src={logo}
             alt={company}
           />
         </div>
